@@ -1,0 +1,54 @@
+# ========== Unity generated folders ==========
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# MemoryCaptures can get excessive in size
+MemoryCaptures/
+
+# Asset meta data should only be ignored when the corresponding asset is also ignored
+*.pidb
+*.suo
+*.user
+*.userprefs
+*.unityproj
+*.booproj
+
+# Unity3D generated meta files
+*.pidb.meta
+*.pdb.meta
+
+# Crash reports
+sysinfo.txt
+
+# ========== Builds ==========
+*.apk
+*.aab
+*.unitypackage
+
+# ========== Visual Studio / IDE ==========
+.vs/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+
+# ========== OS files ==========
+.DS_Store
+Thumbs.db
+
+# ========== Logs ==========
+*.log
+
+# ========== Addressables ==========
+/Assets/AddressableAssetsData/*/*.bin*
+
+# ========== JetBrains Rider ==========
+*.sln.iml
