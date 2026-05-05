@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     private float damageCooldown = 1f;
     private float damageTimer = 0f;
 
-    // ✅ Ladder variables
+    //  Ladder variables
     private bool isClimbing = false;
     public float climbSpeed = 4f;
 
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         direction = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        // ✅ CLIMBING LOGIC
+        //  CLIMBING LOGIC
         if (isClimbing)
         {
             player.gravityScale = 0f;
@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // ✅ Jump only if NOT climbing
+        //  Jump only if NOT climbing
         if (Input.GetButtonDown("Jump") && isTouchingGround && !isClimbing){
             player.velocity = new Vector2(player.velocity.x, JumpSpeed);
         }
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
             scoreText.text = "Score: " + Scoring.totalscore;
             collosion.gameObject.SetActive(false);
         }
-        // ✅ LADDER ENTER
+        //  LADDER ENTER
         else if (collosion.CompareTag("Ladder")){
             isClimbing = true;
         }
@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        // ✅ LADDER EXIT
+        //  LADDER EXIT
         if (collision.CompareTag("Ladder")){
             isClimbing = false;
         }
