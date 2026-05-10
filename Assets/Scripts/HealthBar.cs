@@ -15,10 +15,18 @@ public class HealthBar : MonoBehaviour
         bar = GetComponent<RectTransform>();
         barImage = GetComponent<Image>();
 
+<<<<<<< HEAD
+=======
+        // Reset health to full every time
+>>>>>>> b4d9f2f13777b13e3ce5ecc18ee5fb1d9dfba1bb
         Health.totalHealth = 1f;
 
         player = GameObject.Find("Player");
 
+<<<<<<< HEAD
+=======
+        //  Always start green
+>>>>>>> b4d9f2f13777b13e3ce5ecc18ee5fb1d9dfba1bb
         barImage.color = Color.green;
         SetSize(Health.totalHealth);
     }
@@ -31,12 +39,22 @@ public class HealthBar : MonoBehaviour
             Die();
         }
 
+<<<<<<< HEAD
         if(Health.totalHealth <= 0.3f){
             barImage.color = Color.red;
         } else if(Health.totalHealth <= 0.6f){
             barImage.color = Color.yellow; 
         } else {
             barImage.color = Color.green;  
+=======
+        // Color changes based on health amount
+        if(Health.totalHealth <= 0.3f){
+            barImage.color = Color.red;
+        } else if(Health.totalHealth <= 0.6f){
+            barImage.color = Color.yellow; //  yellow when medium health
+        } else {
+            barImage.color = Color.green;  // green when high health
+>>>>>>> b4d9f2f13777b13e3ce5ecc18ee5fb1d9dfba1bb
         }
 
         SetSize(Health.totalHealth);

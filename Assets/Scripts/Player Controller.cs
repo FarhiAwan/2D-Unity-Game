@@ -27,7 +27,11 @@ public class PlayerController : MonoBehaviour
     private float damageCooldown = 1f;
     private float damageTimer = 0f;
 
+<<<<<<< HEAD
    
+=======
+    //  Ladder variables
+>>>>>>> b4d9f2f13777b13e3ce5ecc18ee5fb1d9dfba1bb
     private bool isClimbing = false;
     public float climbSpeed = 4f;
 
@@ -46,6 +50,10 @@ public class PlayerController : MonoBehaviour
         direction = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
+<<<<<<< HEAD
+=======
+        //  CLIMBING LOGIC
+>>>>>>> b4d9f2f13777b13e3ce5ecc18ee5fb1d9dfba1bb
         if (isClimbing)
         {
             player.gravityScale = 0f;
@@ -68,6 +76,10 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+<<<<<<< HEAD
+=======
+        //  Jump only if NOT climbing
+>>>>>>> b4d9f2f13777b13e3ce5ecc18ee5fb1d9dfba1bb
         if (Input.GetButtonDown("Jump") && isTouchingGround && !isClimbing){
             player.velocity = new Vector2(player.velocity.x, JumpSpeed);
         }
@@ -103,6 +115,10 @@ public class PlayerController : MonoBehaviour
             scoreText.text = "Score: " + Scoring.totalscore;
             collosion.gameObject.SetActive(false);
         }
+<<<<<<< HEAD
+=======
+        //  LADDER ENTER
+>>>>>>> b4d9f2f13777b13e3ce5ecc18ee5fb1d9dfba1bb
         else if (collosion.CompareTag("Ladder")){
             isClimbing = true;
         }
@@ -110,6 +126,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+<<<<<<< HEAD
+=======
+        //  LADDER EXIT
+>>>>>>> b4d9f2f13777b13e3ce5ecc18ee5fb1d9dfba1bb
         if (collision.CompareTag("Ladder")){
             isClimbing = false;
         }
