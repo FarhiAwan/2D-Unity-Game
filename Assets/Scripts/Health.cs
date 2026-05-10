@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-  public static float totalHealth = 1f; // Static variable to keep track of health across scenes
+  public static float totalHealth = 1f; 
 }
